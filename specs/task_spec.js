@@ -7,7 +7,7 @@ describe('Task', function() {
 
 
   beforeEach( function () {
-    task = new Task('Easy', 1, 20, completedStatus);
+    task = new Task('Easy', 1, 20, false);
   });
 
 
@@ -24,11 +24,11 @@ describe('Task', function() {
   });
 
   it('should have a completed status', function () {
-    assert.strictEqual(task.completedStatus, false);
+    assert.strictEqual(task.status, false);
   });
 
   it('should be marked as completed', function () {
     task.complete(task);
-    assert.strictEqual(task.completedStatus, true);
+    assert.strictEqual(task.status, true);
   });
 });
