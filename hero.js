@@ -9,5 +9,9 @@ Hero.prototype.talk = function () {
 return `Bad ${this.name}...Good ${this.name}!`
 };
 
+Hero.prototype.addTask = function (task) {
+this.tasks.push(task);
+};
+
 
 module.exports = Hero;

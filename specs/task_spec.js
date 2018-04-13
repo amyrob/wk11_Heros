@@ -5,6 +5,7 @@ describe('Task', function() {
   let task;
   let completedStatus;
 
+
   beforeEach( function () {
     task = new Task('Easy', 1, 20, completedStatus);
   });

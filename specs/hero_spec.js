@@ -1,13 +1,15 @@
 const assert = require('assert');
 const Hero = require('../hero.js');
+const Task = require('../task.js');
 
 describe('Hero', function() {
   let hero;
   let tasks;
+  let task;
 
   beforeEach( function () {
     hero = new Hero('Deadpool', 100, 'tacos');
-
+    task = new Task('Easy', 1, 20, false);
   });
 
   it('should have a name', function () {
@@ -30,5 +32,10 @@ describe('Hero', function() {
   it('should have no tasks', function () {
     const expected = hero.tasks.length;
     assert.deepStrictEqual(expected, 0)
+  });
+
+  it('should add task', function () {
+    hero.addTask(task);
+    assert.deepStrictEqual(hero.tasks.length, 1);
   });
 });
